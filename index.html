@@ -35,6 +35,15 @@
             </svg>
         </button>
 
+    </div>
+
+    <div style="position: absolute;right: 0;top: 250px" id="erase">
+        <button>
+            <svg class="icon" id="clear" aria-hidden="true">
+                <use xlink:href="#icon-clear"></use>
+            </svg>
+        </button>
+
 
     </div>
 
@@ -52,10 +61,15 @@
         }
 
 
+        let clear = document.getElementById("clear");
+        clear.addEventListener('click', () => {
+            ctx.clearRect(0, 0, document.documentElement.clientWidth, document.documentElement.clientHeight);
+        })
 
-        let button = document.getElementById('erase')
 
-        button.addEventListener('click', () => {
+        let erase = document.getElementById('erase')
+
+        erase.addEventListener('click', () => {
             remove()
         })
 
@@ -64,6 +78,9 @@
         pen.addEventListener('click', () => {
             ctx.globalCompositeOperation = "source-over"
         })
+
+
+
 
         let red = document.getElementById('red')
         let green = document.getElementById('green')
@@ -152,7 +169,7 @@
 
 
     </script>
-    <script src="//at.alicdn.com/t/font_2205195_756jbqdtkdv.js"></script>
+    <script src="//at.alicdn.com/t/font_2205195_mdazu6j5ld.js"></script>
 </body>
 
 </html>
